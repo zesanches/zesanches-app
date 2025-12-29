@@ -21,7 +21,7 @@ async function importArticles(locale: string): Promise<BlogPostWithContent[]> {
   const articles: BlogPostWithContent[] = [];
 
   // Usando import.meta.glob para carregar todos os arquivos .md
-  const modules = import.meta.glob<MarkdownModule>('/content/blog/**/*.md');
+  const modules = import.meta.glob<MarkdownModule>('./content/blog/**/*.md');
 
   for (const path in modules) {
     // Verificar se o arquivo pertence ao locale correto
