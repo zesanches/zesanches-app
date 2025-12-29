@@ -61,7 +61,7 @@ async function importArticles(locale: string): Promise<BlogPostWithContent[]> {
 export async function loadArticle(locale: string, slug: string): Promise<BlogPostWithContent | null> {
   try {
     // Tentar importar o arquivo específico
-    const module = await import(`/content/blog/${locale}/${slug}/index.md`) as MarkdownModule;
+    const module = await import(`./content/blog/${locale}/${slug}/index.md`) as MarkdownModule;
 
     return {
       id: slug,
@@ -86,7 +86,7 @@ export async function loadArticles(locale: string): Promise<BlogPost[]> {
 
 // Função para obter a lista de artigos disponíveis (usado no build)
 export function getAvailableArticles(locale: string): string[] {
-  const modules = import.meta.glob('/content/blog/**/*.md');
+  const modules = import.meta.glob('./content/blog/**/*.md');
   const slugs: string[] = [];
 
   for (const path in modules) {
