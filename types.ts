@@ -18,6 +18,9 @@ export interface Book {
   status: 'Lido' | 'Lendo' | 'Recomendado' | 'Read' | 'Reading' | 'Recommended';
   coverUrl?: string;
   thoughts?: string;
+  amazonUrl?: string;
+  amazonUrlBR?: string;
+  amazonUrlUS?: string;
 }
 
 export interface BlogPost {
@@ -67,5 +70,4 @@ export interface AppContent {
   education: Education[];
   skills: Skill[];
   books: Book[];
-  posts: BlogPost[];
 }

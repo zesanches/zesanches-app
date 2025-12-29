@@ -96,59 +96,23 @@ Atualmente, na X-Brain Software Development, atuo no desenvolvimento de sistemas
   skills: COMMON_DATA.skills,
   books: [
     {
-      title: "Clean Code",
-      author: "Robert C. Martin",
+      title: "You Don't Know JS Yet: Get Started",
+      author: "Kyle Simpson",
       status: "Lido",
-      thoughts: "Essencial para entender a importância de escrever código legível e sustentável. Mudou minha visão sobre funções pequenas.",
-      coverUrl: "https://picsum.photos/100/150?random=1"
+      thoughts: "O primeiro livro da série me deu uma base sólida dos fundamentos do JavaScript. Essencial para entender a linguagem em profundidade.",
+      coverUrl: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1580357376i/50718908.jpg",
+      amazonUrlBR: "https://www.amazon.com.br/You-Dont-Know-JS-Yet/dp/B084DFZ6GW",
+      amazonUrlUS: "https://www.amazon.com/You-Dont-Know-JS-Yet/dp/B084DFZ6GW"
     },
     {
-      title: "The Pragmatic Programmer",
-      author: "Andrew Hunt & David Thomas",
-      status: "Lido",
-      thoughts: "Uma filosofia completa de desenvolvimento de software. A mentalidade 'basta funcionar' não é suficiente.",
-      coverUrl: "https://picsum.photos/100/150?random=2"
-    },
-    {
-      title: "Refactoring UI",
-      author: "Adam Wathan & Steve Schoger",
-      status: "Lido",
-      thoughts: "Fundamental para desenvolvedores que querem melhorar o design sem serem designers gráficos. Dicas práticas incríveis.",
-      coverUrl: "https://picsum.photos/100/150?random=3"
-    },
-    {
-      title: "Domain-Driven Design",
-      author: "Eric Evans",
+      title: "You Don't Know JS Yet: Scope & Closures",
+      author: "Kyle Simpson",
       status: "Lendo",
-      thoughts: "Denso, mas necessário para arquitetar aplicações complexas como as que trabalho na X-Brain.",
-      coverUrl: "https://picsum.photos/100/150?random=4"
-    }
-  ],
-  posts: [
-    {
-      id: "react-performance",
-      title: "Otimizando Performance em Aplicações React de Alta Escala",
-      date: "12 Mar 2024",
-      excerpt: "Estratégias de memoização, code-splitting e virtualização que utilizamos em sistemas de missão crítica.",
-      content: "Content placeholder...",
-      tags: ["React", "Performance", "Engineering"]
+      thoughts: "Explorando o funcionamento de escopo léxico e closures em JavaScript. Mudando minha forma de pensar sobre organização de código.",
+      coverUrl: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1585414018i/52764087.jpg",
+      amazonUrlBR: "https://www.amazon.com.br/You-Dont-Know-JS-Yet/dp/B086GD45ZG",
+      amazonUrlUS: "https://www.amazon.com/You-Dont-Know-JS-Yet/dp/B086GD45ZG"
     },
-    {
-      title: "Acessibilidade não é feature, é requisito",
-      id: "a11y-react",
-      date: "05 Fev 2024",
-      excerpt: "Como construir componentes inclusivos utilizando Radix UI e boas práticas de ARIA.",
-      content: "Content placeholder...",
-      tags: ["A11y", "UI/UX"]
-    },
-    {
-      title: "Migrando de Javascript para Typescript: Lições Aprendidas",
-      id: "ts-migration",
-      date: "10 Nov 2023",
-      excerpt: "Os desafios e benefícios de tipar uma base de código legada em produção.",
-      content: "Content placeholder...",
-      tags: ["TypeScript", "Refactoring"]
-    }
   ]
 };
 
@@ -172,7 +136,7 @@ export const CONTENT_EN: AppContent = {
   },
   personalInfo: {
     ...COMMON_DATA,
-    role: "Front-end Developer | React | Typescript",
+    role: "Front-end Developer (Future JS Specialist) | React | Typescript",
     location: "Londrina, Paraná, Brazil",
     summary: `I am a Front-end Developer passionate about transforming business requirements into scalable, resilient, and high-performance interfaces. With solid experience in the React ecosystem, I focus on creating reusable and accessible components that ensure the best user experience.
 
@@ -234,58 +198,22 @@ export const CONTENT_EN: AppContent = {
   ],
   books: [
     {
-      title: "Clean Code",
-      author: "Robert C. Martin",
+      title: "You Don't Know JS Yet: Get Started",
+      author: "Kyle Simpson",
       status: "Read",
-      thoughts: "Essential for understanding the importance of writing readable and sustainable code. Changed my view on small functions.",
-      coverUrl: "https://picsum.photos/100/150?random=1"
+      thoughts: "The first book in the series gave me a solid foundation of JavaScript fundamentals. Essential for understanding the language in depth.",
+      coverUrl: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1580357376i/50718908.jpg",
+      amazonUrlBR: "https://www.amazon.com.br/You-Dont-Know-JS-Yet/dp/B084DFZ6GW",
+      amazonUrlUS: "https://www.amazon.com/You-Dont-Know-JS-Yet/dp/B084DFZ6GW"
     },
     {
-      title: "The Pragmatic Programmer",
-      author: "Andrew Hunt & David Thomas",
-      status: "Read",
-      thoughts: "A complete philosophy of software development. The 'it just works' mindset is not enough.",
-      coverUrl: "https://picsum.photos/100/150?random=2"
-    },
-    {
-      title: "Refactoring UI",
-      author: "Adam Wathan & Steve Schoger",
-      status: "Read",
-      thoughts: "Fundamental for developers who want to improve design without being graphic designers. Amazing practical tips.",
-      coverUrl: "https://picsum.photos/100/150?random=3"
-    },
-    {
-      title: "Domain-Driven Design",
-      author: "Eric Evans",
+      title: "You Don't Know JS Yet: Scope & Closures",
+      author: "Kyle Simpson",
       status: "Reading",
-      thoughts: "Dense, but necessary for architecting complex applications like the ones I work on at X-Brain.",
-      coverUrl: "https://picsum.photos/100/150?random=4"
-    }
-  ],
-  posts: [
-    {
-      id: "react-performance",
-      title: "Optimizing Performance in High-Scale React Applications",
-      date: "Mar 12, 2024",
-      excerpt: "Memoization strategies, code-splitting, and virtualization we use in mission-critical systems.",
-      content: "Content placeholder...",
-      tags: ["React", "Performance", "Engineering"]
+      thoughts: "Exploring how lexical scope and closures work in JavaScript. Changing the way I think about code organization.",
+      coverUrl: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1585414018i/52764087.jpg",
+      amazonUrlBR: "https://www.amazon.com.br/You-Dont-Know-JS-Yet/dp/B086GD45ZG",
+      amazonUrlUS: "https://www.amazon.com/You-Dont-Know-JS-Yet/dp/B086GD45ZG"
     },
-    {
-      title: "Accessibility is not a feature, it's a requirement",
-      id: "a11y-react",
-      date: "Feb 05, 2024",
-      excerpt: "How to build inclusive components using Radix UI and ARIA best practices.",
-      content: "Content placeholder...",
-      tags: ["A11y", "UI/UX"]
-    },
-    {
-      title: "Migrating from Javascript to Typescript: Lessons Learned",
-      id: "ts-migration",
-      date: "Nov 10, 2023",
-      excerpt: "Challenges and benefits of typing a legacy codebase in production.",
-      content: "Content placeholder...",
-      tags: ["TypeScript", "Refactoring"]
-    }
   ]
 };

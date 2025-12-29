@@ -3,6 +3,7 @@ import { Route, HashRouter as Router, Routes, useLocation } from 'react-router-d
 import Layout from './components/Layout';
 import { AppProvider } from './contexts/AppContext';
 import About from './pages/About';
+import ArticleDetail from './pages/ArticleDetail';
 import Blog from './pages/Blog';
 import Books from './pages/Books';
 import Experience from './pages/Experience';
@@ -27,6 +28,7 @@ const App: React.FC = () => {
             <Route path="/" element={<About />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<ArticleDetail />} />
             <Route path="/books" element={<Books />} />
           </Routes>
         </Layout>
