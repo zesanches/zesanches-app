@@ -60,17 +60,25 @@ async function importArticles(locale: string): Promise<BlogPostWithContent[]> {
 // Função para carregar um artigo específico
 export async function loadArticle(locale: string, slug: string): Promise<BlogPostWithContent | null> {
   try {
-    // Tentar importar o arquivo específico
-    const module = await import(`/content/blog/${locale}/${slug}/index.md`) as MarkdownModule;
+    // Usar import.meta.glob para obter todos os módulos e filtrar o correto
+    const modules = import.meta.glob<MarkdownModule>('/content/blog/**/*.md');
+    const targetPath = `/content/blog/${locale}/${slug}/index.md`;
 
-    return {
-      id: slug,
-      title: module.attributes.title || '',
-      date: module.attributes.date || '',
-      excerpt: module.attributes.excerpt || '',
-      tags: module.attributes.tags || [],
-      content: module.markdown,
-    };
+    if (modules[targetPath]) {
+      const module = await modules[targetPath]();
+
+      return {
+        id: slug,
+        title: module.attributes.title || '',
+        date: module.attributes.date || '',
+        excerpt: module.attributes.excerpt || '',
+        tags: module.attributes.tags || [],
+        content: module.markdown,
+      };
+    }
+
+    console.error(`Article not found: ${targetPath}`);
+    return null;
   } catch (error) {
     console.error(`Error loading article ${slug} for locale ${locale}:`, error);
     return null;
