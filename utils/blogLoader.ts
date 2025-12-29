@@ -61,7 +61,7 @@ async function importArticles(locale: string): Promise<BlogPostWithContent[]> {
 export async function loadArticle(locale: string, slug: string): Promise<BlogPostWithContent | null> {
   try {
     // Tentar importar o arquivo específico
-    const module = await import(`./content/blog/${locale}/${slug}/index.md`) as MarkdownModule;
+    const module = await import(`/content/blog/${locale}/${slug}/index.md`) as MarkdownModule;
 
     return {
       id: slug,
