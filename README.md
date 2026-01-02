@@ -1,6 +1,6 @@
-# José Malassise Portfolio
+# José Sanches Portfolio
 
-Um portfólio minimalista e moderno desenvolvido para apresentar projetos, experiências e conteúdos de José Malassise, Senior Front-end React Engineer.
+Um portfólio minimalista e moderno desenvolvido para apresentar projetos, experiências e conteúdos de José Sanches, Senior Front-end React Engineer.
 
 ## 🎯 Sobre o Projeto
 
@@ -112,7 +112,7 @@ Este é um projeto privado de portfólio pessoal.
 
 ## 👨‍💻 Autor
 
-**José Malassise** - Senior Front-end React Engineer
+**José Sanches** - Senior Front-end React Engineer
 
 ---
 

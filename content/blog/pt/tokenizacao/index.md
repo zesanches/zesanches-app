@@ -3,7 +3,7 @@ title: "A Jornada do Código: Tokenização e Análise Léxica em JavaScript"
 date: "2025-12-29"
 excerpt: "Muitos desenvolvedores encaram o JavaScript como uma linguagem puramente interpretada, que simplesmente 'lê e executa' o código linha por linha. No entanto, o motor do JavaScript realiza um processo de compilação em milissegundos antes da execução."
 tags: ["JavaScript", "Compiladores", "Performance"]
-author: "José Malassise"
+author: "José Sanches"
 ---
 
 Muitos desenvolvedores encaram o JavaScript como uma linguagem puramente interpretada, que simplesmente "lê e executa" o código linha por linha. No entanto, o motor do JavaScript (como o V8 do Chrome) realiza um processo de compilação em milissegundos antes da execução. A primeira etapa crucial desse processo é o que chamamos de **Análise Léxica**.

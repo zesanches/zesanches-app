@@ -3,7 +3,7 @@ title: "The Journey of Code: Tokenization and Lexical Analysis in JavaScript"
 date: "2025-12-29"
 excerpt: "Many developers view JavaScript as a purely interpreted language that simply 'reads and executes' code line by line. However, the JavaScript engine performs a compilation process in milliseconds before execution."
 tags: ["JavaScript", "Compilers", "Performance"]
-author: "José Malassise"
+author: "José Sanches"
 ---
 
 Many developers view JavaScript as a purely interpreted language that simply "reads and executes" code line by line. However, the JavaScript engine (such as Chrome's V8) performs a compilation process in milliseconds before execution. The first crucial step of this process is what we call **Lexical Analysis**.

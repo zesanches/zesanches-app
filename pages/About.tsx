@@ -11,9 +11,6 @@ const About: React.FC = () => {
     <FadeWrapper>
       <section className="space-y-12">
         <div className="prose prose-stone max-w-none">
-          <p className="text-xl md:text-2xl font-serif text-primary leading-relaxed">
-            {personalInfo.name}
-          </p>
           <div className="mt-6 space-y-4 text-secondary text-lg leading-8 font-light">
             {personalInfo.summary.split('\n\n').map((paragraph, idx) => (
               <p key={idx}>{paragraph}</p>

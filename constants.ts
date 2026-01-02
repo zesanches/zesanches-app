@@ -1,7 +1,7 @@
 import { AppContent } from './types';
 
 const COMMON_DATA = {
-  name: "José Malassise",
+  name: "José Sanches",
   email: "josemanoelmalassise@gmail.com",
   linkedin: "https://www.linkedin.com/in/josemalassise353380227",
   github: "https://github.com/zesanches",

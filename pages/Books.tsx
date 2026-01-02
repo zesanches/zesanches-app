@@ -25,33 +25,33 @@ const Books: React.FC = () => {
             const amazonUrl = language === 'pt' ? (book.amazonUrlBR || book.amazonUrl) : (book.amazonUrlUS || book.amazonUrl);
             const proxiedImageUrl = book.coverUrl ? getProxiedImageUrl(book.coverUrl, 200, 80) : null;
 
+            const BookCoverContent = () => (
+              <>
+                <div className="absolute inset-0 flex items-center justify-center text-secondary opacity-20">
+                  <BooksIcon size={32} />
+                </div>
+                {proxiedImageUrl && (
+                  <img src={proxiedImageUrl} alt={book.title} className="w-full h-full object-cover relative z-10" />
+                )}
+              </>
+            );
+
+            const coverClassName = "w-full sm:w-24 h-36 bg-surface-hover shrink-0 rounded-sm overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-500";
+
             return (
               <div key={idx} className="flex flex-col sm:flex-row gap-4 group">
-                {/* Cover Placeholder - Minimalist */}
                 {amazonUrl ? (
                   <a
                     href={amazonUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-24 h-36 bg-surface-hover shrink-0 rounded-sm overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-500 cursor-pointer"
+                    className={`${coverClassName} cursor-pointer`}
                   >
-                    {/* Fallback pattern if image fails or just as style */}
-                    <div className="absolute inset-0 flex items-center justify-center text-secondary opacity-20">
-                      <BooksIcon size={32} />
-                    </div>
-                    {proxiedImageUrl && (
-                      <img src={proxiedImageUrl} alt={book.title} className="w-full h-full object-cover relative z-10" />
-                    )}
+                    <BookCoverContent />
                   </a>
                 ) : (
-                  <div className="w-full sm:w-24 h-36 bg-surface-hover shrink-0 rounded-sm overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-500">
-                    {/* Fallback pattern if image fails or just as style */}
-                    <div className="absolute inset-0 flex items-center justify-center text-secondary opacity-20">
-                      <BooksIcon size={32} />
-                    </div>
-                    {proxiedImageUrl && (
-                      <img src={proxiedImageUrl} alt={book.title} className="w-full h-full object-cover relative z-10" />
-                    )}
+                  <div className={coverClassName}>
+                    <BookCoverContent />
                   </div>
                 )}
 

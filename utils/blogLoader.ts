@@ -16,25 +16,18 @@ interface MarkdownModule {
   markdown: string;
 }
 
-// Função para importar todos os artigos de um locale
 async function importArticles(locale: string): Promise<BlogPostWithContent[]> {
   const articles: BlogPostWithContent[] = [];
-
-  // Usando import.meta.glob para carregar todos os arquivos .md
   const modules = import.meta.glob<MarkdownModule>('/content/blog/**/*.md');
 
   for (const path in modules) {
-    // Verificar se o arquivo pertence ao locale correto
     if (!path.includes(`/content/blog/${locale}/`)) {
       continue;
     }
 
     try {
       const module = await modules[path]();
-
-      // Extrair o slug do caminho: /content/blog/pt/tokenizacao/index.md -> tokenizacao
-      const slugMatch = path.match(/\/content\/blog\/[^/]+\/([^/]+)\//);
-      const slug = slugMatch ? slugMatch[1] : '';
+      const slug = extractSlugFromPath(path);
 
       articles.push({
         id: slug,
@@ -49,7 +42,15 @@ async function importArticles(locale: string): Promise<BlogPostWithContent[]> {
     }
   }
 
-  // Ordenar por data (mais recente primeiro)
+  return sortArticlesByDateDescending(articles);
+}
+
+function extractSlugFromPath(path: string): string {
+  const slugMatch = path.match(/\/content\/blog\/[^/]+\/([^/]+)\//);
+  return slugMatch ? slugMatch[1] : '';
+}
+
+function sortArticlesByDateDescending(articles: BlogPostWithContent[]): BlogPostWithContent[] {
   return articles.sort((a, b) => {
     const dateA = new Date(a.date).getTime();
     const dateB = new Date(b.date).getTime();
@@ -57,10 +58,8 @@ async function importArticles(locale: string): Promise<BlogPostWithContent[]> {
   });
 }
 
-// Função para carregar um artigo específico
 export async function loadArticle(locale: string, slug: string): Promise<BlogPostWithContent | null> {
   try {
-    // Usar import.meta.glob para obter todos os módulos e filtrar o correto
     const modules = import.meta.glob<MarkdownModule>('/content/blog/**/*.md');
     const targetPath = `/content/blog/${locale}/${slug}/index.md`;
 
@@ -85,14 +84,11 @@ export async function loadArticle(locale: string, slug: string): Promise<BlogPos
   }
 }
 
-// Função para carregar todos os artigos de um locale
 export async function loadArticles(locale: string): Promise<BlogPost[]> {
   const articles = await importArticles(locale);
-  // Retornar sem o conteúdo completo para a listagem
   return articles.map(({ content, ...post }) => post);
 }
 
-// Função para obter a lista de artigos disponíveis (usado no build)
 export function getAvailableArticles(locale: string): string[] {
   const modules = import.meta.glob('./content/blog/**/*.md');
   const slugs: string[] = [];
