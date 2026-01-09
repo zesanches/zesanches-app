@@ -107,11 +107,20 @@ Atualmente, na X-Brain Software Development, atuo no desenvolvimento de sistemas
     {
       title: "You Don't Know JS Yet: Scope & Closures",
       author: "Kyle Simpson",
-      status: "Lendo",
+      status: "Lido",
       thoughts: "Explorando o funcionamento de escopo léxico e closures em JavaScript. Mudando minha forma de pensar sobre organização de código.",
       coverUrl: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1585414018i/52764087.jpg",
       amazonUrlBR: "https://www.amazon.com.br/You-Dont-Know-JS-Yet/dp/B086GD45ZG",
       amazonUrlUS: "https://www.amazon.com/You-Dont-Know-JS-Yet/dp/B086GD45ZG"
+    },
+    {
+      title: "You Don't Know JS: this & Object Prototypes",
+      author: "Kyle Simpson",
+      status: "Lido",
+      thoughts: "Uma exploração profunda do comportamento de 'this' e do sistema de protótipos do JavaScript. Este livro desmistifica conceitos frequentemente mal compreendidos e mostra como a delegação de comportamento através de protótipos é mais poderosa que a simulação de classes tradicionais.",
+      coverUrl: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1405288115i/22221108.jpg",
+      amazonUrlBR: "https://www.amazon.com.br/You-Dont-Know-Js-Prototypes/dp/1491904151",
+      amazonUrlUS: "https://www.amazon.com/You-Dont-Know-JS-Prototypes/dp/1491904151"
     },
   ]
 };
@@ -209,11 +218,20 @@ export const CONTENT_EN: AppContent = {
     {
       title: "You Don't Know JS Yet: Scope & Closures",
       author: "Kyle Simpson",
-      status: "Reading",
+      status: "Read",
       thoughts: "Exploring how lexical scope and closures work in JavaScript. Changing the way I think about code organization.",
       coverUrl: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1585414018i/52764087.jpg",
       amazonUrlBR: "https://www.amazon.com.br/You-Dont-Know-JS-Yet/dp/B086GD45ZG",
       amazonUrlUS: "https://www.amazon.com/You-Dont-Know-JS-Yet/dp/B086GD45ZG"
+    },
+    {
+      title: "You Don't Know JS: this & Object Prototypes",
+      author: "Kyle Simpson",
+      status: "Read",
+      thoughts: "A deep dive into JavaScript's 'this' behavior and prototype system. This book demystifies frequently misunderstood concepts and shows how behavior delegation through prototypes is more powerful than simulating traditional classes.",
+      coverUrl: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1405288115i/22221108.jpg",
+      amazonUrlBR: "https://www.amazon.com.br/You-Dont-Know-Js-Prototypes/dp/1491904151",
+      amazonUrlUS: "https://www.amazon.com/You-Dont-Know-JS-Prototypes/dp/1491904151"
     },
   ]
 };
