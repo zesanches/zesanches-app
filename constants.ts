@@ -96,6 +96,14 @@ Atualmente, na X-Brain Software Development, atuo no desenvolvimento de sistemas
   skills: COMMON_DATA.skills,
   books: [
     {
+      title: "Designing Data-Intensive Applications (2ª edição)",
+      author: "Martin Kleppmann e Chris Riccomini",
+      status: "Lendo",
+      coverUrl: "https://m.media-amazon.com/images/I/81yW67wBLHL._SY425_.jpg",
+      amazonUrlBR: "https://www.amazon.com.br/dp/1098119061",
+      amazonUrlUS: "https://www.amazon.com/dp/1098119061"
+    },
+    {
       title: "You Don't Know JS Yet: Get Started",
       author: "Kyle Simpson",
       status: "Lido",
@@ -206,6 +214,14 @@ export const CONTENT_EN: AppContent = {
     { category: "Methodologies & Others", items: COMMON_DATA.skills[1].items }
   ],
   books: [
+    {
+      title: "Designing Data-Intensive Applications (2nd Edition)",
+      author: "Martin Kleppmann and Chris Riccomini",
+      status: "Reading",
+      coverUrl: "https://m.media-amazon.com/images/I/81yW67wBLHL._SY425_.jpg",
+      amazonUrlBR: "https://www.amazon.com.br/dp/1098119061",
+      amazonUrlUS: "https://www.amazon.com/dp/1098119061"
+    },
     {
       title: "You Don't Know JS Yet: Get Started",
       author: "Kyle Simpson",
