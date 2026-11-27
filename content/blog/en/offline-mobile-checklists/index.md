@@ -48,7 +48,7 @@ Finish step → Redux queue → AsyncStorage
 
 For a small queue, saving structured data as JSON in a key-value store is a straightforward choice. The serialized size matters because in this design, updating the queue rewrites its JSON. When the app needs to query many records, use indexes, or sync only what changed, SQLite starts to make more sense. The team also takes on schema migrations between app releases.
 
-The checklist kept photos as files on the device and stored only their paths in the queue. Compression and batched multipart uploads happened at upload time. The files have to remain available while an upload is pending. Session credentials used protection provided by the Android Keystore. On iOS, Keychain serves that role for application secrets. Answers, photos, and signatures also deserve an assessment based on how sensitive the data left on the device is. [OWASP MASVS secure storage control](https://mas.owasp.org/MASVS/controls/MASVS-STORAGE-1/)
+The checklist kept photos as files on the device and stored only their paths in the queue. Compression and batched multipart uploads happened at upload time. The files have to remain available while an upload is pending. Session credentials used protection provided by the Android Keystore. On iOS, Keychain serves that role for application secrets. When storing data offline, choose safeguards based on the sensitivity of each type of data, including answers, photos, and signatures. [OWASP MASVS secure storage control](https://mas.owasp.org/MASVS/controls/MASVS-STORAGE-1/)
 
 ### When answers go through and photos fail
 
@@ -133,7 +133,7 @@ In a React Native development build, turning off the network can also cut the co
 
 The hotfix fit inside the app and required no new dependency or API contract change. Upload stayed manual. On returning to the screen or refreshing the list, the operator can find the pending job and start the upload. A NetInfo listener could trigger an attempt on reconnection. For persistent background work, Android has WorkManager and iOS has BackgroundTasks, with execution subject to the system's conditions. With any of these approaches, the request outcome still determines whether the upload was confirmed. [NetInfo](https://github.com/react-native-netinfo/react-native-netinfo) · [WorkManager](https://developer.android.com/develop/background-work/background-tasks/persistent) · [BackgroundTasks](https://developer.apple.com/documentation/backgroundtasks)
 
-The initial list of sites still needs a connection. If someone reopens the app offline, the queue remains on the device, but that screen can keep the operator from reaching the appointments. The `schedule` and `Schedule` key mismatch was recorded as technical debt, and inspection data still uses regular storage without application-level encryption. This fix made saved steps visible and restored signatures within the inspection flow.
+The initial list of sites still needs a connection. If someone reopens the app offline, the queue remains on the device, but that screen can keep the operator from reaching the appointments. The `schedule` and `Schedule` key mismatch was recorded as technical debt. This fix made saved steps visible and restored signatures within the inspection flow.
 
 ## A checklist for your app
 

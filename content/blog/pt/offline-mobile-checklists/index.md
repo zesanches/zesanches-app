@@ -48,7 +48,7 @@ Finalizar etapa → fila Redux → AsyncStorage
 
 Para uma fila pequena, guardar dados estruturados como JSON em um armazenamento chave-valor é uma opção simples. O volume serializado importa porque, nesse desenho, atualizar a fila significa regravar seu JSON. Quando a aplicação precisa consultar muitos registros, usar índices ou sincronizar só o que mudou, SQLite passa a fazer mais sentido. A equipe também assume o trabalho de migrar o esquema entre versões do app.
 
-No checklist, as fotos ficavam em arquivos no aparelho e a fila guardava só os caminhos. A compressão e o envio em lotes via multipart aconteciam na hora do upload. Os arquivos precisam continuar disponíveis enquanto houver uma tentativa pendente. As credenciais de sessão tinham proteção fornecida pelo Android Keystore. Em iOS, o Keychain cumpre esse papel para segredos da aplicação. Respostas, fotos e assinaturas também precisam ser avaliadas pela sensibilidade dos dados que ficam no dispositivo. [OWASP MASVS, armazenamento seguro](https://mas.owasp.org/MASVS/controls/MASVS-STORAGE-1/)
+No checklist, as fotos ficavam em arquivos no aparelho e a fila guardava só os caminhos. A compressão e o envio em lotes via multipart aconteciam na hora do upload. Os arquivos precisam continuar disponíveis enquanto houver uma tentativa pendente. As credenciais de sessão tinham proteção fornecida pelo Android Keystore. Em iOS, o Keychain cumpre esse papel para segredos da aplicação. Ao armazenar dados offline, escolha a proteção de acordo com a sensibilidade de cada tipo de informação, como respostas, fotos e assinaturas. [OWASP MASVS, armazenamento seguro](https://mas.owasp.org/MASVS/controls/MASVS-STORAGE-1/)
 
 ### Quando as respostas chegam e as fotos falham
 
@@ -133,7 +133,7 @@ Em um build de desenvolvimento do React Native, desligar a rede também pode cor
 
 O hotfix coube no app, sem dependência nova ou alteração no contrato da API. O envio continuou manual. Ao voltar à tela ou atualizar a lista, o operador encontra a pendência e pode iniciar o upload. Um listener do NetInfo poderia disparar uma tentativa na reconexão. Para trabalho persistente em segundo plano, há o WorkManager no Android e o BackgroundTasks no iOS, com execução sujeita às condições do sistema. Em qualquer dessas opções, o resultado da requisição ainda determina se o envio foi confirmado. [NetInfo](https://github.com/react-native-netinfo/react-native-netinfo) · [WorkManager](https://developer.android.com/develop/background-work/background-tasks/persistent) · [BackgroundTasks](https://developer.apple.com/documentation/backgroundtasks)
 
-A lista inicial de plantas ainda precisa da rede. Se alguém reabrir o app offline, a fila continua no aparelho, mas essa tela pode impedir que o operador chegue aos agendamentos. A divergência entre `schedule` e `Schedule` ficou registrada como dívida, e os dados de inspeção continuam no armazenamento comum, sem criptografia pela aplicação. O que resolvemos foi a visibilidade da etapa já salva e a assinatura dentro do fluxo de inspeção.
+A lista inicial de plantas ainda precisa da rede. Se alguém reabrir o app offline, a fila continua no aparelho, mas essa tela pode impedir que o operador chegue aos agendamentos. A divergência entre `schedule` e `Schedule` ficou registrada como dívida. O que resolvemos foi a visibilidade da etapa já salva e a assinatura dentro do fluxo de inspeção.
 
 ## Checklist para testar no seu app
 
